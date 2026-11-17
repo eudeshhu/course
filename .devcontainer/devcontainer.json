@@ -4,7 +4,7 @@
 	"forwardPorts": [
 		5000
 	],
-	"postCreateCommand": "uv sync --frozen --no-install-project",
+	"postCreateCommand": "uv sync --frozen --no-install-project && mkdir -p ~/.snowflake && printf '%s' \"$SNOWFLAKE_PRIVATE_KEY\" > ~/.snowflake/rsa_key.p8 && chmod 600 ~/.snowflake/rsa_key.p8",
 	"customizations": {
 		"vscode": {
 			"settings": {
